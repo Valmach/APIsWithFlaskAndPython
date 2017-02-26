@@ -31,27 +31,29 @@ class Student:
     def average(self):
         return sum(self.marks) / len(self.marks)
 
-
-anna = Student("Anna", "MIT")
+    @staticmethod
+    def go_to_school():
+        print("I am going to school. ")
+anna = Student("Anna", "MIT ")
+rolf = Student("Rolf", "Oxford ")
 anna.marks.append(56)
 anna.marks.append(76)
-print(anna.average())
+Student.go_to_school()
 
-
-class Store:
-    def __init__(self, name):
-        self.name = name
-        self.items = []
-        # You'll need 'name' as an argument to this method.
-        # Then, initialise 'self.name' to be the argument, and 'self.items' to be an empty list.
-
-    def add_item(self, name, price):
-        # Create a dictionary with keys name and price, and append that to self.items
-        self.items.append({'name': name, 'price': price})
-
-    def stock_price(self):
-        total = 0
-        for stuff in self.items:
-            total += stuff['price']
-        return total
-        # Add together all item prices in self.items and return the total.
+# class Store:
+#     def __init__(self, name):
+#         self.name = name
+#         self.items = []
+#         # You'll need 'name' as an argument to this method.
+#         # Then, initialise 'self.name' to be the argument, and 'self.items' to be an empty list.
+#
+#     def add_item(self, name, price):
+#         # Create a dictionary with keys name and price, and append that to self.items
+#         self.items.append({'name': name, 'price': price})
+#
+#     def stock_price(self):
+#         total = 0
+#         for stuff in self.items:
+#             total += stuff['price']
+#         return total
+#         # Add together all item prices in self.items and return the total.
